@@ -43,7 +43,7 @@ function Login() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-[#F28383] from-10% via-[#9D6CD2] via-30% to-[#481EDC] to-90% text-white">
+    <div className="flex flex-col items-center justify-center h-screen  text-white">
       <ToastContainer />
       <div className="text-3xl font-bold mb-8">
         Job<span className="inline-block animate-pulse-emoji">ℹ</span>re
@@ -64,7 +64,7 @@ function Login() {
           className="text-black py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
         />
         {error && <div className="text-red-500 text-sm">{error}</div>}
-        <button type="submit" className="bg-blue-400 text-white py-2 rounded-lg hover:bg-blue-500 transition duration-300">
+        <button type="submit" className="bg-violet-800 text-white py-2 rounded-lg hover:bg-violet-700 transition duration-300">
           Login
         </button>
       </form>

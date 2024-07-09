@@ -8,7 +8,7 @@ function Navbar() {
       <div className="text-3xl font-bold text-white">
         Job<span className="inline-block animate-pulse">ℹ</span>re
       </div>
-      <div className="flex gap-8 text-2xl">
+      <div className="flex gap-8 text-center text-xl">
         <Link to="/about" className="text-white hover:scale-110 transition-transform duration-300">About</Link>
         <Link to="/jobs" className="text-white hover:scale-110 transition-transform duration-300">Search Jobs</Link>
         <Link to="/referral" className="text-white hover:scale-110 transition-transform duration-300">Get Referral</Link>

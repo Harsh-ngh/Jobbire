@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {  createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../firebase.config'; // Ensure you have this config set up correctly
+import { auth } from '../firebase.config'; 
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -32,7 +32,7 @@ function Signup() {
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed up 
+      
         const user = userCredential.user;
         console.log("User signed up: ", user);
         setSuccessMessage("Registered Successfully");
@@ -51,14 +51,14 @@ function Signup() {
     if (successMessage) {
       const timer = setTimeout(() => {
         navigate('/home');
-      }, 2000); // Redirect after 2 seconds
+      }, 2000); 
 
       return () => clearTimeout(timer);
     }
   }, [successMessage, navigate]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-[#F28383] from-10% via-[#9D6CD2] via-30% to-[#481EDC] to-90% text-white">
+    <div className="flex flex-col items-center justify-center h-screen  text-white">
       <div className="text-3xl font-bold mb-8">
         Job<span className="inline-block animate-pulse-emoji">ℹ</span>re
       </div>
@@ -91,10 +91,10 @@ function Signup() {
         />
         {error && <div className="text-red-500 text-sm">{error}</div>}
         {successMessage && <div className="text-green-500 text-sm">{successMessage}</div>}
-        <button type="submit" className="bg-blue-400 text-white py-2 rounded-lg hover:bg-blue-500 transition duration-300">
+        <button type="submit" className="bg-violet-800 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
           Sign up
         </button>
-        <Link to="/login" className="text-blue-400 text-sm mt-2 inline-block">
+        <Link to="/login" className="text-blue-400 text-sm mt-2 inline-block text-center">
           Already have an Account ? Login
         </Link>
       </form>

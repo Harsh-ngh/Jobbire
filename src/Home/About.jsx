@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import aboutImage from './Assets/jobire.png'; 
-import Jobs from '../Jobs';
+
 
 function About() {
   return (
@@ -11,7 +11,7 @@ function About() {
         <p className="text-lg leading-7">
           Welcome to Jobire, your gateway to finding the perfect job tailored to your preferences. Our platform offers robust job filtering options, ensuring you can easily discover opportunities that match your skills and aspirations. Additionally, Jobire facilitates connections with industry professionals for valuable referrals, enhancing your chances of landing your dream job. Start your job search journey with Jobire today and take the next step towards a fulfilling career.
         </p>
-        <Link to='/jobs' className="inline-block mt-4 px-6 py-3 bg-sky-950 text-white rounded-lg hover:bg-sky-900 transition duration-300">
+        <Link to='/jobs' className="inline-block mt-4 px-6 py-3 bg-indigo-900 text-white rounded-lg hover:bg-indigo-800 transition duration-300">
           Grab ℹ️t Now
         </Link>
       </div>

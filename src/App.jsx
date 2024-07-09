@@ -1,78 +1,35 @@
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
-import JobCard from "./components/JobCard";
-import { useEffect, useState } from "react";
-import { collection, query, orderBy, where, getDocs } from "firebase/firestore";
-import { db } from "./firebase.config";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './Auth/Login';
+import Signup from './Auth/Signup';
+import Home from './Home/Home';
+import Page404 from './Page404'
+import About from './Home/About';
+import Jobs from './Jobs';
+import GetReferral from './Home/GetReferral'
+import Register from './Home/Register';
+import MatchedUser from './Home/MatchedUser';
 
 function App() {
-  const [jobs, setJobs] = useState([]);
-  const [customSearch, setCustomSearch] = useState(false);
-
-  const fetchJobs = async () => {
-    setCustomSearch(false);
-    const tempJobs = [];
-    const jobsRef = collection(db, "jobs");
-    const q = query(jobsRef, orderBy("postedOn", "desc"));
-    const req = await getDocs(q);
-
-    req.forEach((job) => {
-      tempJobs.push({
-        ...job.data(),
-        id: job.id,
-        postedOn: job.data().postedOn.toDate(),
-      });
-    });
-
-    console.log("Fetched jobs:", tempJobs); // Debug statement
-    setJobs(tempJobs);
-  };
-
-  const fetchJobsCustom = async (jobCriteria) => {
-    setCustomSearch(true);
-    const tempJobs = [];
-    const jobsRef = collection(db, "jobs");
-    const q = query(
-      jobsRef,
-      where("type", "==", jobCriteria.type),
-      where("title", "==", jobCriteria.title),
-      where("experience", "==", jobCriteria.experience),
-      where("location", "==", jobCriteria.location),
-      orderBy("postedOn", "desc")
-    );
-    const req = await getDocs(q);
-
-    req.forEach((job) => {
-      tempJobs.push({
-        ...job.data(),
-        id: job.id,
-        postedOn: job.data().postedOn.toDate(),
-      });
-    });
-
-    console.log("Fetched custom jobs:", tempJobs); // Debug statement
-    setJobs(tempJobs);
-  };
-
-  useEffect(() => {
-    fetchJobs();
-  }, []);
-
-  return (
-    <div>
-      <Navbar />
-      <Header />
-      <SearchBar fetchJobsCustom={fetchJobsCustom} />
-      {customSearch && (
-        <button onClick={fetchJobs} className="flex pl-[1250px] mb-2">
-          <p className="bg-blue-500 px-10 py-2 rounded-md text-white">Clear Filters</p>
-        </button>
-      )}
-      {jobs.map((job) => {
-        console.log("Job passed to JobCard:", job); // Debug statement
-        return <JobCard key={job.id} {...job} />;
-      })}
+    return (
+      <div>
+    {/* // <div className='h-20 flex items-center w-full text-white'>
+    //   <div className='text-3xl pl-20 font-bold'>
+    //     Job<span className='inline-block animate-pulse-emoji'>ℹ</span>re
+    //   </div> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Signup />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/referral" element={<GetReferral />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<Page404 />} />
+           <Route path="matcheduser" element={<MatchedUser />} /> 
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

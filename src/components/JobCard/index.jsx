@@ -5,7 +5,7 @@ function JobCard(props) {
   const date1 = dayjs(Date.now());
   const diffInDays = date1.diff(props.postedOn, 'day');
 
-  console.log("JobCard props:", props); // Debug statement
+  // console.log("JobCard props:", props); // Debug statement
 
   return (
     <div className="mx-40 mb-4">
