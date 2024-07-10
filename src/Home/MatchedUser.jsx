@@ -10,7 +10,7 @@ const MatchedUser = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`https://jobbire-dca5e-default-rtdb.firebaseio.com/userData.json`);
+        const res = await fetch(`https://jobire-9f505-default-rtdb.firebaseio.com/userData.json`);
         if (!res.ok) {
           throw new Error('Network response was not ok');
         }
@@ -75,8 +75,8 @@ const MatchedUser = () => {
       ) : (
         <p className="text-white">Sorry! We did not get any match for you.</p>
       )}
-      <Link to='/home'>
-        <button className='justify-centre w-20 h-10 bg-white text-centre rounded-sm text-black'>Go Home</button>
+      <Link to='/referral'>
+        <button className='justify-centre ml-auto mr-auto w-40 h-10 bg-white text-centre rounded-sm text-black'>Search Again</button>
       </Link>
     </div>
   );

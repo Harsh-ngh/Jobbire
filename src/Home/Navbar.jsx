@@ -14,7 +14,7 @@ function Navbar() {
         <Link to="/referral" className="text-white hover:scale-110 transition-transform duration-300">Get Referral</Link>
          <Link to="/register" className="text-white hover:scale-110 transition-transform duration-300">
       <button className='bg-blue-900 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300'>
-        Register
+        Join Now
       </button>
     </Link>
       </div>

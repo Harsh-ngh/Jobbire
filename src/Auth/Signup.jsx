@@ -65,14 +65,14 @@ function Signup() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-md w-96">
         <input
           type="text"
-          placeholder="Enter name"
+          placeholder="Enter Name"
           className="text-black py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
         />
         <input
           type="email"
           value={email}
           onChange={handleEmailChange}
-          placeholder="Enter your email"
+          placeholder="Enter Email"
           className="text-black py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
         />
         <input

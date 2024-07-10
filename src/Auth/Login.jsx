@@ -53,14 +53,14 @@ function Login() {
           type="email"
           value={email}
           onChange={handleEmailChange}
-          placeholder="Email Address"
+          placeholder="Enter Email"
           className="text-black py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
         />
         <input
           type="password"
           value={password}
           onChange={handlePasswordChange}
-          placeholder="Password"
+          placeholder="Enter Password"
           className="text-black py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
         />
         {error && <div className="text-red-500 text-sm">{error}</div>}

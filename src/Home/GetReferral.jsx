@@ -29,6 +29,7 @@ const GetReferral = () => {
               onChange={(e) => setCompany(e.target.value)}
               className="form-input mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
               placeholder="Enter Company Name"
+              reriured
             />
           </div>
           <div className="mb-6">
