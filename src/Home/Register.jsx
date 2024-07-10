@@ -25,7 +25,7 @@ const Register = () => {
     if (firstName && lastName && phone && email && address && college && company) {
       try {
         const res = await fetch(
-          "https://jobbire-dca5e-default-rtdb.firebaseio.com/userData.json",
+          "https://jobire-9f505-default-rtdb.firebaseio.com/userData.json",
           {
             method: "POST",
             headers: {
