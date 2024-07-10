@@ -73,11 +73,19 @@ const MatchedUser = () => {
           </div>
         ))
       ) : (
-        <p className="text-white">Sorry! We did not get any match for you.</p>
+        <p className="text-white text-xl">Sorry! We did not get any match for you.</p>
       )}
-      <Link to='/referral'>
-        <button className='justify-centre ml-auto mr-auto w-40 h-10 bg-white text-centre rounded-sm text-black'>Search Again</button>
+      <div className='flex flex-col gap-2 items-center justify-center mt-10 ml-auto mr-auto'>
+        <Link to='/referral'>
+        <button className='justify-centre ml-auto mr-10 w-40 h-10 bg-white text-centre rounded-sm text-black'>Search Again</button>
+        </Link>
+        <Link to='/jobs'>
+        <button className='justify-centre ml-auto mr-10 w-40 h-10 bg-white text-centre rounded-sm text-black'>Find Jobs</button>
       </Link>
+      <Link to='/home' > 
+        <button className=' justify-centre ml-auto mr-10 w-40 h-10 bg-white text-centre rounded-sm text-black'>Go Home</button>
+      </Link>
+      </div>
     </div>
   );
 };
