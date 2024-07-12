@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import jobireLogo from './Assets/jobire.png';
+import { MdHomeFilled } from 'react-icons/md';
 
 const GetReferral = () => {
   const [company, setCompany] = useState('');
@@ -29,7 +30,7 @@ const GetReferral = () => {
               onChange={(e) => setCompany(e.target.value)}
               className="form-input mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
               placeholder="Enter Company Name"
-              reriured
+              required
             />
           </div>
           <div className="mb-6">
@@ -41,12 +42,21 @@ const GetReferral = () => {
               onChange={(e) => setCollege(e.target.value)}
               className="form-input mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
               placeholder="Enter College Name"
+              required
             />
           </div>
-          <button type="submit" className="w-full py-3 bg-indigo-900 text-white rounded-lg hover:bg-indigo-800 focus:outline-none focus:bg-indigo-800">
+          <button type="submit" className="w-full py-3 bg-purple-900 text-white rounded-lg hover:bg-purple-800 focus:outline-none focus:bg-indigo-800">
             Search
           </button>
         </form>
+        <div className="flex justify-center mt-4">
+          <Link to="/home" className="w-full">
+            <button className="flex items-center justify-center bg-purple-800 text-white py-3 px-6 rounded-lg hover:bg-purple-700 focus:outline-none focus:bg-indigo-800 w-full">
+              <MdHomeFilled className="mr-2" />
+              Home
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

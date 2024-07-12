@@ -9,6 +9,7 @@ import Jobs from './Jobs';
 import GetReferral from './Home/GetReferral'
 import Register from './Home/Register';
 import MatchedUser from './Home/MatchedUser';
+import Post from './Home/Post';
 
 function App() {
     return (
@@ -27,7 +28,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<Page404 />} />
-           <Route path="matcheduser" element={<MatchedUser />} /> 
+          <Route path="matcheduser" element={<MatchedUser />} /> 
+          <Route path="post" element={<Post />} /> 
         </Routes>
       </BrowserRouter>
     </div>

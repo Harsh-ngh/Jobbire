@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { MdHomeFilled } from "react-icons/md";
 
 const Register = () => {
   const [userData, setUserData] = useState({
@@ -53,9 +55,9 @@ const Register = () => {
             college: "",
             company: "",
           });
-          toast.success("Data Stored");
+          toast.success("Thanks for joining Jobire");
         } else {
-          toast.error("Error storing data");
+          toast.error("Error");
         }
       } catch (error) {
         toast.error("Error storing data: " + error.message);
@@ -76,6 +78,14 @@ const Register = () => {
             <p className="text-lg mb-4">
               After registering on Jobire, you will become eligible to refer and get connect with other Jobire users.
             </p>
+            <div className="flex justify-center mt-4">
+              <Link to="/home">
+                <button className="flex items-center bg-purple-900 text-white py-3 px-6 rounded-lg hover:bg-purple-800 focus:outline-none focus:bg-indigo-800">
+                  <MdHomeFilled className="mr-2" />
+                  Go Home
+                </button>
+              </Link>
+            </div>
           </div>
 
           <div className="w-full lg:w-5/12 bg-white text-black p-8 rounded-lg shadow-lg mr-6">
@@ -189,7 +199,7 @@ const Register = () => {
 
               <button
                 type="submit"
-                className="btn btn-primary w-full py-4 bg-indigo-900 text-white rounded-lg hover:bg-indigo-800"
+                className="btn btn-primary w-full py-4 bg-purple-900 text-white rounded-lg hover:bg-purple-800"
               >
                 Submit
               </button>

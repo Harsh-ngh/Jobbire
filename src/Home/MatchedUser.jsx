@@ -67,8 +67,8 @@ const MatchedUser = () => {
                 </button>
               ) : 'No Email Provided'}</p>
             </div>
-            <button className="bg-indigo-900 text-white px-4 py-2 rounded" onClick={() => handleConnectEmail(user.email)}>
-              Contact
+            <button className=" bg-purple-800  hover:bg-purple-700 text-white px-4 py-2 rounded" onClick={() => handleConnectEmail(user.email)}>
+              Connect Now
             </button>
           </div>
         ))
@@ -77,13 +77,13 @@ const MatchedUser = () => {
       )}
       <div className='flex flex-col gap-2 items-center justify-center mt-10 ml-auto mr-auto'>
         <Link to='/referral'>
-        <button className='justify-centre ml-auto mr-10 w-40 h-10 bg-white text-centre rounded-sm text-black'>Search Again</button>
+        <button className='justify-centre ml-auto mr-10 w-40 h-10 bg-purple-800  hover:bg-purple-700 text-centre rounded-sm text-white'>Search Again</button>
         </Link>
         <Link to='/jobs'>
-        <button className='justify-centre ml-auto mr-10 w-40 h-10 bg-white text-centre rounded-sm text-black'>Find Jobs</button>
+        <button className='justify-centre ml-auto mr-10 w-40 h-10 bg-purple-800  hover:bg-purple-700 text-centre rounded-sm text-white'>Find Jobs</button>
       </Link>
       <Link to='/home' > 
-        <button className=' justify-centre ml-auto mr-10 w-40 h-10 bg-white text-centre rounded-sm text-black'>Go Home</button>
+        <button className=' justify-centre ml-auto mr-10 w-40 h-10 bg-purple-800 hover:bg-purple-700 text-centre rounded-sm text-white'>Go Home</button>
       </Link>
       </div>
     </div>

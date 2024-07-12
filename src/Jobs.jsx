@@ -5,6 +5,8 @@ import JobCard from "./components/JobCard";
 import { useEffect, useState } from "react";
 import { collection, query, orderBy, where, getDocs } from "firebase/firestore";
 import { db } from "./firebase.config";
+import { Link } from "react-router-dom";
+import { MdHomeFilled } from "react-icons/md";
 
 function Jobs() {
   const [jobs, setJobs] = useState([]);
@@ -25,7 +27,6 @@ function Jobs() {
       });
     });
 
-    // console.log("Fetched jobs:", tempJobs); // Debug statement
     setJobs(tempJobs);
   };
 
@@ -51,7 +52,6 @@ function Jobs() {
       });
     });
 
-    console.log("Fetched custom jobs:", tempJobs); // Debug statement
     setJobs(tempJobs);
   };
 
@@ -69,8 +69,12 @@ function Jobs() {
           <p className="bg-blue-500 px-10 py-2 rounded-md text-white">Clear Filters</p>
         </button>
       )}
+      <div className="flex justify-end p-2 mr-5">
+        <Link to="/home" className="flex items-center mr-20 mb-3 mt-2 text-white">
+          <MdHomeFilled size={24} /> Go Home
+        </Link>
+      </div>
       {jobs.map((job) => {
-        console.log("Job passed to JobCard:", job); // Debug statement
         return <JobCard key={job.id} {...job} />;
       })}
     </div>
