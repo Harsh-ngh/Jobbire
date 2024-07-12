@@ -13,7 +13,7 @@ function About() {
       <div className="w-2/3 p-10">
         <h2 className="text-4xl font-bold mb-4">About Jobℹre</h2>
         <p className="text-lg leading-7">
-          Welcome to Jobire, your gateway to finding the perfect job tailored to your preferences. Our platform offers robust job filtering options, ensuring you can easily discover opportunities that match your skills and aspirations. Additionally, Jobire facilitates connections with industry professionals for valuable referrals, enhancing your chances of landing your dream job. Start your job search journey with Jobire today and take the next step towards a fulfilling career.
+          Welcome to Jobire, your gateway to finding the perfect job tailored to your preferences. Our platform offers robust job filtering options, ensuring you can easily discover opportunities that match your skills and aspirations. Additionally, Jobire facilitates connections with industry professionals for valuable referrals, posting an opening for enhancing your chances of landing your dream job. Start your job search journey with Jobire today and take the next step towards a fulfilling career.
         </p>
         <div className="flex flex-row gap-x-4 mt-6 justify-center">
           <Link to='/home' className="px-6 py-3 bg-indigo-900 text-white rounded-lg hover:bg-indigo-800 transition duration-300 flex items-center">
