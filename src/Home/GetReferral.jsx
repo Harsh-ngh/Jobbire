@@ -14,11 +14,11 @@ const GetReferral = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="w-2/5 max-w-md p-8">
+    <div className="flex flex-col md:flex-row items-center justify-center h-screen">
+      <div className="hidden md:block md:w-2/5 max-w-md p-8">
         <img src={jobireLogo} alt="Jobire Logo" className="w-full max-h-64 mx-auto mb-8" />
       </div>
-      <div className="w-3/5 max-w-lg p-8">
+      <div className="w-full md:w-3/5 max-w-lg p-8">
         <h2 className="text-2xl text-white mb-6 text-center">Connect and grow through mutual referrals at Jobire</h2>
         <form onSubmit={handleSubmit} className="bg-white rounded-lg p-8 shadow-md">
           <div className="mb-6">

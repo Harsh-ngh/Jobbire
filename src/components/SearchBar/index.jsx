@@ -30,12 +30,12 @@ function SearchBar(props) {
   };
 
   return (
-    <div className="flex gap-4 my-10 justify-center px-10">
+    <div className="flex flex-col sm:flex-row gap-4 my-10 justify-center px-4 sm:px-10">
       <select
         onChange={handleChange}
         name="title"
         value={jobCriteria.title}
-        className="w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md"
+        className="w-full sm:w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md"
       >
         <option value="" disabled hidden>
           Job Role
@@ -50,7 +50,7 @@ function SearchBar(props) {
         onChange={handleChange}
         name="type"
         value={jobCriteria.type}
-        className="w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md"
+        className="w-full sm:w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md"
       >
         <option value="" disabled hidden>
           Job Type
@@ -63,7 +63,7 @@ function SearchBar(props) {
         onChange={handleChange}
         name="location"
         value={jobCriteria.location}
-        className="w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md"
+        className="w-full sm:w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md"
       >
         <option value="" disabled hidden>
           Location
@@ -76,7 +76,7 @@ function SearchBar(props) {
         onChange={handleChange}
         name="experience"
         value={jobCriteria.experience}
-        className="w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md"
+        className="w-full sm:w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md"
       >
         <option value="" disabled hidden>
           Experience
@@ -86,7 +86,7 @@ function SearchBar(props) {
         <option value="Mid Level">Mid Level</option>
         <option value="Senior Level">Senior Level</option>
       </select>
-      <button onClick={search} className="w-64 bg-blue-500 text-white font-bold py-3 rounded-md">
+      <button onClick={search} className="w-full sm:w-64 bg-blue-500 text-white font-bold py-3 rounded-md">
         Search
       </button>
     </div>
