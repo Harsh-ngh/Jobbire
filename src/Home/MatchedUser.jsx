@@ -36,11 +36,11 @@ const MatchedUser = () => {
     window.location.href = `mailto:${email}`;
   };
 
-  const handleConnectPhone = (phone) => {
-    // Implement your logic to handle phone connection here
-    // Example: open dialer or initiate a call
-    console.log(`Connecting to phone number: ${phone}`);
-  };
+  // const handleConnectPhone = (phone) => {
+  //   // Implement your logic to handle phone connection here
+  //   // Example: open dialer or initiate a call
+  //   console.log(`Connecting to phone number: ${phone}`);
+  // };
 
   return (
     <div className="justify-centre p-8 rounded-lg" style={{ background: 'linear-gradient(to right, rgb(15, 23, 42), rgb(88, 28, 135), rgb(15, 23, 42))' }}>

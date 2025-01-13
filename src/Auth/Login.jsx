@@ -64,7 +64,8 @@ function Login() {
           className="text-black py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
         />
         {error && <div className="text-red-500 text-sm">{error}</div>}
-        <button type="submit" className="bg-violet-800 text-white py-2 rounded-lg hover:bg-violet-700 transition duration-300">
+        <button type="submit"
+          className="bg-violet-800 text-white py-2 rounded-lg hover:bg-violet-700 transition duration-300">
           Login
         </button>
       </form>
