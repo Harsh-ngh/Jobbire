@@ -36,7 +36,7 @@ function Login() {
       })
       .catch((error) => {
         const errorMessage = error.message;
-        console.error("Error signing in: ", errorMessage);
+        console.error("Error, login failed: ", errorMessage);
         setError(errorMessage);
         toast.error(errorMessage);
       });

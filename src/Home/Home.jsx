@@ -14,8 +14,8 @@ function Home() {
             <TypingEffect
               strings={['Get your dream job.', 'Apply now.', 'Find the perfect role.']}
               typeSpeed={50}
-              backSpeed={30}
-              backDelay={2000}
+              backSpeed={40}
+              backDelay={1000}
               loop
             />
           </p>

@@ -14,9 +14,7 @@ function About() {
           Welcome to Jobire, your gateway to finding the perfect job tailored to your preferences. Our platform offers robust job filtering options, ensuring you can easily discover opportunities that match your skills and aspirations. Jobire also facilitates connections with industry professionals for valuable referrals, enhancing your chances of landing your dream job. Start your job search journey with Jobire today.
         </p>
         <div className="flex flex-col md:flex-row gap-4 mt-6 justify-center">
-          <Link to='/home' className="px-6 py-3 justify-center bg-indigo-900 text-white rounded-lg hover:bg-indigo-800 transition duration-300 flex items-center">
-            <MdHomeFilled className="mr-2" /> Home
-          </Link>
+          
           <Link to='/jobs' className="px-6 py-3 justify-center bg-indigo-900 text-white rounded-lg hover:bg-indigo-800 transition duration-300 flex items-center">
             <MdScreenSearchDesktop className="mr-2" /> Get Your Jobs
           </Link>
@@ -28,6 +26,9 @@ function About() {
           </Link>
           <Link to='/register' className="px-6 py-3 justify-center bg-indigo-900 text-white rounded-lg hover:bg-indigo-800 transition duration-300 flex items-center">
             <RiLoginCircleFill className="mr-2" /> Join Us
+          </Link>
+          <Link to='/home' className="px-6 py-3 justify-center bg-indigo-900 text-white rounded-lg hover:bg-indigo-800 transition duration-300 flex items-center">
+            <MdHomeFilled className="mr-2" /> Home
           </Link>
         </div>
       </div>

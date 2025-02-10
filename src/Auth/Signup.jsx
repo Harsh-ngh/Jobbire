@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import {  createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase.config'; 
 
 function Signup() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(""); 
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
@@ -40,22 +40,23 @@ function Signup() {
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error("Error signing up: ", errorCode, errorMessage);
+        const errorMessage = error.message
+        console.error(`Error signing up: , ${errorCode}, ${errorMessage}`);
         setError(errorMessage);
         setSuccessMessage("");
       });
   };
 
   useEffect(() => {
-    if (successMessage) {
+    if (successMessage) { // sucessMessage is set when user is successfully signed up in the
+                          // createUserWithEmailAndPasswor function
       const timer = setTimeout(() => {
         navigate('/home');
       }, 2000); 
 
       return () => clearTimeout(timer);
     }
-  }, [successMessage, navigate]);
+  }, [successMessage]);
 
   return (
     <div className="flex flex-col items-center justify-center h-screen  text-white">
@@ -65,6 +66,7 @@ function Signup() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-md w-96">
         <input
           type="text"
+         
           placeholder="Enter Name"
           className="text-black py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
         />
