@@ -23,3 +23,5 @@ src/firebase.config.js
 *.njsproj
 *.sln
 *.sw?
+
+// there is a flaw 
