@@ -1,4 +1,4 @@
-# Job Portal - ReactJS
+# Job Portal 
  Job Portal using ReactJS, Tailwind CSS and Firebase.
 
  .................................................................
